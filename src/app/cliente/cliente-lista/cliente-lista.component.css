@@ -1,0 +1,32 @@
+.primeira-coluna {
+    width: 3em;
+    border-top-left-radius: 4em;
+    border-bottom-left-radius: 4em; 
+}
+
+.ultima-coluna {
+    width: 3em;
+    border-top-right-radius: 4em;
+    border-bottom-right-radius: 4em; 
+    
+}
+
+tr.border-row>td {
+    padding: 1em 0;   
+    background-color: #e5e5e5;    
+}
+
+
+tr.border-row {
+    border-color: white;
+    border-width: 1em;
+}
+
+tr:hover,th:hover {
+    cursor: pointer;
+    color: #032D38;
+}
+
+tr:hover td {
+    background-color: #c7c7c7;
+}

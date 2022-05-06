@@ -1,0 +1,82 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="h3 mt-3 title-blue">{{clienteId ? 'Edição' : 'Cadastro'}} de Clientes</h1>
+        </div>
+    </div>
+    <form (ngSubmit)="salvar()" #clienteForm="ngForm">
+        <div class="row mt-3 text-blue fw-bold">
+            <div class="col-6">
+                <label for="nome" class="form-label">Nome*:</label>
+                <input type="text" placeholder="Informe o nome" class="form-control form-control-lg" id="nome" name="nome" #nome="ngModel"
+                    required [(ngModel)]="cliente.nome">
+                    <div [hidden]="nome.valid || nome.pristine"
+                        class="alert alert-danger">
+                        Nome é obrigatório
+                    </div>
+                    <div [hidden]="nome.untouched || validarSobrenome()"
+                    class="alert alert-danger">
+                    Nome deve possuir ao menos um sobrenome
+                </div>
+            </div>
+            <div class="col-3">
+                <label for="cpf" class="form-label">CPF*:</label>
+                <input type="text" placeholder="Insira o CPF" mask="000.000.000-00" class="form-control form-control-lg" name="cpf" #cpf="ngModel"
+                required id="cpf" [(ngModel)]="cliente.cpf" [disabled]="desabilitarCpf">
+                <div [hidden]="cpf.untouched || cpf.valid || cpf.pristine"
+                    class="alert alert-danger">
+                    Cpf é obrigatório
+                </div>
+                <div [hidden]="cpf.untouched || isValidCPF()"
+                    class="alert alert-danger">
+                    CPF deve ser válido
+                </div>
+            </div>
+            <div class="col-3">
+                <label for="nascimento" class="form-label">Data de Nascimento*:</label>
+                <input type="date" placeholder="__/__/____" class="form-control form-control-lg" id="nascimento" name="nascimento" #nascimento="ngModel"
+                required [(ngModel)]="cliente.nascimento">
+                <div [hidden]="nascimento.valid || nascimento.pristine"
+                    class="alert alert-danger">
+                    Data de nascimento é obrigatória
+                </div>
+                <div [hidden]="nascimento.untouched || validarIdade()"
+                    class="alert alert-danger">
+                    Cliente deve possuir mais de 18 anos e menos de 60
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3 text-blue fw-bold">
+            <div class="col-3">
+                <label for="rendaMensal" class="form-label">Renda Mensal*:</label>
+                <input type="text" prefix="R$ " class="form-control form-control-lg" id="rendaMensal" name="rendaMensal" #renda="ngModel"
+                required  mask="separator.2" [(ngModel)]="cliente.rendaMensal" [thousandSeparator]="'.'"
+                [decimalMarker]="','">
+                <div [hidden]="renda.valid || renda.pristine"
+                    class="alert alert-danger">
+                    Renda Mensal é obrigatória
+                </div>
+            </div>
+            <div class="col-9">
+                <label for="email" class="form-label">Email*:</label>
+                <input type="email" placeholder="Informe o seu e-mail" class="form-control form-control-lg" id="email" name="email" #email="ngModel"
+                required [(ngModel)]="cliente.email" email>
+                <div [hidden]="email.untouched || email.valid || email.pristine"
+                    class="alert alert-danger">
+                    Email em formato incorreto ou não informado
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <div class="form-text">*Campos com preenchimento obrigatório</div>
+            </div>
+        </div>
+        <div class="row mt-5 justify-content-center">
+            <div class="col-2">
+                <button type="submit" [disabled]="!clienteForm.form.valid || !validarIdade() || !isValidCPF() || !validarSobrenome()"
+                    class="btn btn-salvar text-uppercase w-100 fw-bold">Salvar</button>
+            </div>
+        </div>
+    </form>
+</div>

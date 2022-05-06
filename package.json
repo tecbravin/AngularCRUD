@@ -1,12 +1,12 @@
 {
-  "name": "teste-financeira",
+  "name": "cadastro-cliente",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "jsonserver": "json-server --watch db.json",
-    "prod": "ng build --configuration production --base-href https://bazsant.github.io/teste-financeira/",
+    "prod": "ng build --configuration production --base-href https://tecbravin.github.io/cadastro-cliente/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
