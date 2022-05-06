@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+.bg-header {
+    background-color: #032D38;
+}
+
+.title-blue {
+    color: #032D38;
+}
+
+.text-blue {
+    color: #00586F;
+}
+
+.text-light-blue {
+    color: #0EA0C0;
+}
+.btn { 
+    color: #fff;
+}
+.btn-salvar {
+    background-color: #73D852;
+    border-color: #73D852;
+    height: 48px;
+}
+
+.btn-salvar:hover {
+    color: whitesmoke;
+}
+
+.btn-excluir {
+    background-color: #0d99ff;
+}
+
+.btn-excluir:hover {
+    background-color: royalblue;
+}

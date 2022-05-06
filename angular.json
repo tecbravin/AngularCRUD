@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "CadastroCliente": {
+    "teste-financeira": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,14 +17,19 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/cadastro-cliente",
+            "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "*.svg",
+                "input": "./node_modules/feather-icons/",
+                "output": "/"
+                }
             ],
             "styles": [
               "src/styles.css"
@@ -68,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "CadastroCliente:build:production"
+              "browserTarget": "teste-financeira:build:production"
             },
             "development": {
-              "browserTarget": "CadastroCliente:build:development"
+              "browserTarget": "teste-financeira:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "CadastroCliente:build"
+            "browserTarget": "teste-financeira:build"
           }
         },
         "test": {
@@ -102,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "CadastroCliente"
+  "defaultProject": "teste-financeira"
 }

@@ -1,8 +1,58 @@
-{"clientes": 
-    [
-        {
-            "Nome": "Marwin Bravin", "CPF": "12345678901", "Data Nascimento": "02/02/2000",
-            "Renda Mensal": 18999, "E-mail": "tecbravin@gmail.com", "Data Cadastro": "03/05/2022"
-        }
-    ]
+{
+  "clientes": [
+    {
+      "id": "7aa0c8bb-cba5-44ec-be13-4ef80f504618",
+      "nome": "Marwin Bravin",
+      "cpf": "98495195097",
+      "email": "tecbravin@mail.com",
+      "cadastro": "05/05/2022 16:11:43",
+      "nascimento": "10/01/1980",
+      "rendaMensal": 1000.5
+    },
+    {
+      "id": "0992c73d-ad2a-4118-859f-6cf9523ed66b",
+      "nome": "Elon Musk",
+      "cpf": "25187628097",
+      "nascimento": "20/04/1977",
+      "email": "tes@la.com",
+      "rendaMensal": 140001.9,
+      "cadastro": "05/05/2022 10:42:05"
+    },
+    {
+      "id": "0c618e31-9edd-4cc2-9f67-50ced575dc22",
+      "nome": "John Wick",
+      "cpf": "40298685841",
+      "email": "tester@gmail.com",
+      "cadastro": "05/05/2022 11:15:35",
+      "nascimento": "01/07/1999",
+      "rendaMensal": 100.34
+    },
+    {
+      "id": "821ae639-9158-4010-8a49-c87347f21e57",
+      "nome": "Batman O Morcego",
+      "cpf": "96279286070",
+      "email": "bat@man.com",
+      "cadastro": "02/01/2022 10:50:49",
+      "nascimento": "20/07/2000",
+      "rendaMensal": 1234131
+    },
+    {
+      "id": "5692a566-8f45-4028-824e-7ccfc113b5ae",
+      "nome": "Samwise Gamgee",
+      "cpf": "80015317080",
+      "email": "hobbit@condado.com.br",
+      "cadastro": "06/05/2022 11:52:11",
+      "nascimento": "30/04/1990",
+      "rendaMensal": 1211.2
+    },
+    {
+      "id": "d03e26df-98e5-4b0a-980b-de21263446b6",
+      "nome": "Inigo Montoya",
+      "cpf": "03180109092",
+      "email": "woohoo@yahoo.com",
+      "cadastro": "06/05/2022 00:56:25",
+      "nascimento": "18/01/1980",
+      "rendaMensal": 5200.11
+    }
+  ]
 }
